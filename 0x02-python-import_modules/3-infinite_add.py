@@ -1,13 +1,7 @@
-from sys import argv
+#!/usr/bin/python3
+import sys
 
-def add_arguments():
-    # Get the arguments and calculate the sum
-    arguments = argv[1:]  # Exclude the script name
-    sum_result = sum(int(arg) for arg in arguments)
-
-    # Print the result
-    print(sum_result)
-
-# Call the function to add and print the result
 if __name__ == "__main__":
-    add_arguments()
+    arguments = sys.argv[1:]
+    total = sum(int(j) for j in arguments)
+    print(total)
