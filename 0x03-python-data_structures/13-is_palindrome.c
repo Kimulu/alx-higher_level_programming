@@ -1,54 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "lists.h"
 
-typedef struct listint {
-    int n;
-    struct listint *next;
-} listint_t;
-
-int is_palindrome(listint_t **head);
-
-int main(void)
-{
-    listint_t *head, *node1, *node2, *node3, *node4, *node5;
-
-    node5 = malloc(sizeof(listint_t));
-    node5->n = 1;
-    node5->next = NULL;
-
-    node4 = malloc(sizeof(listint_t));
-    node4->n = 2;
-    node4->next = node5;
-
-    node3 = malloc(sizeof(listint_t));
-    node3->n = 3;
-    node3->next = node4;
-
-    node2 = malloc(sizeof(listint_t));
-    node2->n = 2;
-    node2->next = node3;
-
-    node1 = malloc(sizeof(listint_t));
-    node1->n = 1;
-    node1->next = node2;
-
-    head = node1;
-
-    if (is_palindrome(&head))
-        printf("The linked list is a palindrome\n");
-    else
-        printf("The linked list is not a palindrome\n");
-
-    // Free the allocated memory
-    while (head)
-    {
-        listint_t *temp = head;
-        head = head->next;
-        free(temp);
-    }
-
-    return (0);
-}
+/* Function prototypes for helper functions */
+void reverse_list(listint_t **head);
+int compare_lists(listint_t *list1, listint_t *list2);
 
 int is_palindrome(listint_t **head)
 {
@@ -76,8 +30,6 @@ int is_palindrome(listint_t **head)
     }
 
     // Reverse the second half of the linked list
-    second_half = slow;
-    prev_slow->next = NULL; // Break the link to the first half
     reverse_list(&second_half);
 
     // Compare the first half and reversed second half
@@ -97,12 +49,13 @@ int is_palindrome(listint_t **head)
 
     return is_palindrome;
 }
-
+/**
+ * reverse_list - Reverses a linked list.
+ * @head: Pointer to the head of the linked list.
+ */
 void reverse_list(listint_t **head)
 {
-    listint_t *prev = NULL;
-    listint_t *current = *head;
-    listint_t *next = NULL;
+    listint_t *prev = NULL, *current = *head, *next = NULL;
 
     while (current != NULL)
     {
@@ -115,6 +68,13 @@ void reverse_list(listint_t **head)
     *head = prev;
 }
 
+/**
+ * compare_lists - Compares two linked lists.
+ * @list1: Pointer to the head of the first linked list.
+ * @list2: Pointer to the head of the second linked list.
+ *
+ * Return: 1 if the lists are equal, 0 otherwise.
+ */
 int compare_lists(listint_t *list1, listint_t *list2)
 {
     while (list1 != NULL && list2 != NULL)
@@ -127,4 +87,3 @@ int compare_lists(listint_t *list1, listint_t *list2)
 
     return (list1 == NULL && list2 == NULL);
 }
-
