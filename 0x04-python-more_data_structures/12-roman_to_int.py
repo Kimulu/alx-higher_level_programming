@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def to_subtract(subtract_list):
     to_subtract_value = 0
     max_value = max(subtract_list)
