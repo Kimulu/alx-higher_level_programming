@@ -10,5 +10,5 @@ def safe_print_list_integers(my_list=[], x=0):
         print()  # Add a newline after printing all integers
     except IndexError:
         print("list index out of range")
-    finally:
-        return num_printed
+
+    return num_printed
