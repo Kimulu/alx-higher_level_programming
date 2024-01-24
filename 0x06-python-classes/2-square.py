@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""Define a class Square."""
+
+
 class Square:
     """Defines a square with a private instance attribute 'size'."""
 
