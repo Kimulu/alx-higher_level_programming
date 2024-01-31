@@ -3,8 +3,6 @@
 """ class representation of a Rectangle """
 
 
-#!/usr/bin/python3
-
 class Rectangle:
     """A class representing a rectangle.
 
