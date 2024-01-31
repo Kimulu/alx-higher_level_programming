@@ -112,7 +112,7 @@ class Rectangle:
             TypeError: If rect_2 is not an instance of Rectangle.
 
         Returns:
-            Rectangle: The bigger rectangle or rect_1 if both have the same area.
+            Rectangle: The bigger rectangle
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
