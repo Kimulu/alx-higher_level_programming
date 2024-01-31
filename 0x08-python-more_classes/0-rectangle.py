@@ -2,5 +2,6 @@
 
 """declaration of empty class """
 
+
 class Rectangle:
     pass
