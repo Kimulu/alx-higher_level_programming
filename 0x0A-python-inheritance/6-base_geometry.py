@@ -18,6 +18,6 @@ class BaseGeometry:
         the 'area()' method is not implemented.
 
         Raises:
-        - Exception: 'area() is not implemented.'
+        - Exception: 'area() is not implemented'
         """
-        raise Exception('area() is not implemented.')
+        raise Exception('area() is not implemented')
