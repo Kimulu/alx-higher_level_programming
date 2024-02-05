@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" function that returns the list of available attributes and methods of an object"""
+""" function that returns the list of available attributes and methods"""
 
 
 def lookup(obj):
@@ -15,10 +15,8 @@ def lookup(obj):
     """
     # Get the list of all attributes and methods of the object
     all_attributes_and_methods = dir(obj)
-    
     # Initialize an empty list to store filtered attributes and methods
     filtered_attributes_and_methods = []
-
     # Iterate through all attributes and methods
     for attr in all_attributes_and_methods:
         if not callable(getattr(obj, attr)) or not attr.startswith("__"):
@@ -26,4 +24,3 @@ def lookup(obj):
             filtered_attributes_and_methods.append(attr)
 
     return filtered_attributes_and_methods
-
