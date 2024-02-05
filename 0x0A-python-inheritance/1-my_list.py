@@ -5,7 +5,7 @@
 
 class MyList(list):
     """
-    Customized list class (inherits from built-in list) with additional functionality.
+    Customized list class with additional functionality.
 
     Public Methods:
     - print_sorted(self): Prints the list in ascending order.
