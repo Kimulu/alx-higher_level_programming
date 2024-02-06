@@ -2,6 +2,7 @@
 """ Write a string to a text file (UTF-8) and
 return the number of characters written. """
 
+
 def write_file(filename="", text=""):
     """
     Write a string to a text file (UTF-8) and

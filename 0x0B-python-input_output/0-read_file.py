@@ -17,7 +17,7 @@ def read_file(filename=""):
     if not filename:
         print("Please provide a filename.")
         return
-    
+
     # Open the file and read its contents
     with open(filename, "r", encoding="utf-8") as file:
         # Read the contents of the file

@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ Function that returns the Python
 data structure represented by a JSON string """
-
-
 import json
+
 
 def from_json_string(my_str):
     """
