@@ -38,5 +38,6 @@ def main():
 
     print("Items added:", sys.argv[1:])
 
+
 if __name__ == "__main__":
     main()
