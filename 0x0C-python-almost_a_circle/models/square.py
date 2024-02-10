@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Defines a class called Square"""
-from models.rectangle import Rectangle
 
+
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
@@ -48,3 +49,17 @@ class Square(Rectangle):
             str: A string representation of the Square object.
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of the Square.
+
+        Returns:
+            dict: A dictionary representation of the Square object.
+        """
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }

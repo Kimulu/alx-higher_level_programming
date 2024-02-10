@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Defines a class called Rectangle """
-from models.base import Base
+""" Defines a class called Rectangle"""
 
+from models.base import Base
 
 class Rectangle(Base):
     """
     Rectangle class representing a rectangle shape.
-    
+
     Attributes:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
@@ -17,16 +17,15 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initializes a Rectangle object with specified
-        width, height, x, y, and id.
+        Initializes a Rectangle object with specified width, height, x, y, and id.
 
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the
-            rectangle's position. Defaults to 0.
-            y (int, optional): The y-coordinate of the
-            rectangle's position. Defaults to 0.
+            x (int, optional): The x-coordinate of
+            the rectangle's position. Defaults to 0.
+            y (int, optional): The y-coordinate of
+            the rectangle's position. Defaults to 0.
             id (int, optional): The unique identifier
             of the rectangle. Defaults to None.
         """
@@ -103,8 +102,8 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Prints the rectangle using '#' characters to
-        represent its shape.
+        Prints the rectangle using '#' characters
+        to represent its shape.
 
         Returns:
             None
@@ -115,11 +114,25 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        """Return the print() and str() representation
-        of the Rectangle."""
+        """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y,
                 self.width, self.height)
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of the Rectangle.
+
+        Returns:
+            dict: A dictionary representation of the Rectangle object.
+        """
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
 
 
     def update(self, *args, **kwargs):
@@ -128,8 +141,8 @@ class Rectangle(Base):
 
         Args:
             *args: Positional arguments.
-            **kwargs: Keyword arguments representing
-            attributes and their values.
+            **kwargs: Keyword arguments representing attributes
+            and their values.
 
         Returns:
             None
