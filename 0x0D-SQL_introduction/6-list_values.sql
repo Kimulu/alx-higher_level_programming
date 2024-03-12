@@ -1,6 +1,2 @@
--- 6-list_values.sql
-
-USE `hbtn_0c_0`;
-
--- List all rows of the first_table
-SELECT * FROM first_table;
+-- Lists all rows of the table first_table in my MySQL server.
+SELECT * FROM `first_table`;

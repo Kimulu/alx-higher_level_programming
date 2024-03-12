@@ -1,6 +1,2 @@
--- 3-list_tables.sql
-
-USE `mysql`;
-
--- List all tables in the specified database
+-- Lists all tables of a database on my MySQL server.
 SHOW TABLES;
