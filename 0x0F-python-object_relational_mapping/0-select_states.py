@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script to connect to a MySQL server and retrieve a list of states from the database.
+Script to connect to a MySQL server and retrieve a list of states.
 """
 
 import MySQLdb
@@ -9,7 +9,7 @@ import sys
 
 def select_states(username, password, database):
     """
-    Connects to a MySQL server and retrieves a list of states from the specified database.
+    Connects to a MySQL server and retrieves a list of states
 
     Args:
         username (str): MySQL username.
